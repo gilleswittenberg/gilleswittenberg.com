@@ -37,7 +37,6 @@ a {
 
 a:hover, a:active, a:focus {
 	color: #333;
-	text-decoration: none;
 	outline: 0;
 }
 
@@ -50,6 +49,10 @@ p {
 main > ul > li > article > a {
 	display: inline-block;
 	margin-bottom: 36px;
+	text-decoration: none;
+}
+main > ul > li > article > a.-is-active {
+	text-decoration: underline;
 }
 
 .content {
@@ -59,7 +62,7 @@ main > ul > li > article > a {
 	overflow: hidden;
 	transition: height .4s ease-in-out;
 }
-.content.expand {
+.content.-is-expanded {
 	display: block;
 	height: auto;
 }
@@ -72,5 +75,6 @@ main > ul > li > article > a {
 	margin-bottom: 8px;
 }
 
-aside {
+.-is-hidden {
+	display: none;
 }
