@@ -75,6 +75,19 @@ main > ul > li > article > a.-is-active {
 	margin-bottom: 8px;
 }
 
+button.expand {
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	font-size: 18px;
+	padding: 2px;
+	line-height: 13px;
+}
+button.expand:hover {
+	color: #000;
+}
+
 .-is-hidden {
 	display: none;
 }

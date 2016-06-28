@@ -1,14 +1,14 @@
 # Gilles Wittenberg
 
 ## TODO
-- expand button icon (SVG)
-- link styling (border-bottom + remove on hover)
 - animate collapsing expanding
-- responsive spacing
+- responsive spacing + max-width
+- link styling (border-bottom + remove on hover)
+- typography
 - routing
 - favicon
-- typography
-- confiscate mailto email address
+- remove hardcoded @ from mailto address
+- non JavaScript version + graceful degration
 - minification (HTML, CSS, JS)
 - archiving older versions
 - server + AWS hosting
