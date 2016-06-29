@@ -56,15 +56,11 @@ main > ul > li > article > a.-is-active {
 }
 
 .content {
-	display: none;
-	height: 0;
 	margin-bottom: 36px;
-	overflow: hidden;
-	transition: height .4s ease-in-out;
+	display: none;
 }
 .content.-is-expanded {
 	display: block;
-	height: auto;
 }
 
 .content a {
