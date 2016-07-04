@@ -1,4 +1,5 @@
 body {
+	/* @LINK: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/ */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	color: #333;
 	margin: 0;
@@ -52,7 +53,7 @@ main > ul > li > article > a {
 	margin-bottom: 36px;
 	text-decoration: none;
 }
-main > ul > li > article > a.-is-active {
+main > ul > li > article.-is-active > a {
 	text-decoration: underline;
 }
 
@@ -60,7 +61,12 @@ main > ul > li > article > a.-is-active {
 	margin-bottom: 36px;
 	display: none;
 }
-.content.-is-expanded {
+
+body.no-js article .content {
+	display: block;
+}
+
+article.-is-active .content, article.-is-expanded .content {
 	display: block;
 }
 
@@ -83,6 +89,9 @@ button.expand {
 }
 button.expand:hover {
 	color: #000;
+}
+body.no-js button.expand {
+	display: none;
 }
 
 .-is-hidden {
