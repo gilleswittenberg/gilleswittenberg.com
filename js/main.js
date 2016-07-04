@@ -30,7 +30,7 @@ var indexes = [];
 var names = [];
 elements.articles.forEach(function (article, index) {
 	indexes.push(index);
-	var a = article.querySelector('a.menu-item');
+	var a = article.querySelector('nav');
 	names.push(a.getAttribute('id'));
 });
 

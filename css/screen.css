@@ -28,9 +28,9 @@ ul {
 	margin: 0;
 }
 
-h1, h2 {
-	margin-top: 0;
-	margin-bottom: 36px;
+h1, h2, main > ul > li > article > nav > a, .content, button.expand {
+	margin-top: 36px;
+	margin-bottom: 0;
 }
 
 a {
@@ -48,17 +48,15 @@ p {
 	text-align: justify;
 }
 
-main > ul > li > article > a {
+main > ul > li > article > nav > a {
 	display: inline-block;
-	margin-bottom: 36px;
 	text-decoration: none;
 }
-main > ul > li > article.-is-active > a {
+main > ul > li > article.-is-active > nav > a {
 	text-decoration: underline;
 }
 
 .content {
-	margin-bottom: 36px;
 	display: none;
 }
 
