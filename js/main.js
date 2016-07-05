@@ -191,7 +191,7 @@ if (namesIndex > -1) {
 	anchor.addEventListener('click', function (event) {
 		event.preventDefault();
 		state.dispatch('TOGGLE_ACTIVE', { index: index });
-			// scroll to element
+		// scroll to element
 		if (state.active.is(index)) {
 			scrollElementIntoView(index);
 		}
