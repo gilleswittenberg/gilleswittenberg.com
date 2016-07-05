@@ -177,14 +177,13 @@ if (namesIndex > -1) {
 // listeners
 
 [].forEach.call(elements.articles, function (article, index) {
-	article.addEventListener('click', function (event) {
+	var anchor = article.querySelector('nav a');
+	anchor.addEventListener('click', function (event) {
 		event.preventDefault();
-		if (event.target.nodeName === 'A') {
-			state.dispatch('TOGGLE_ACTIVE', { index: index });
+		state.dispatch('TOGGLE_ACTIVE', { index: index });
 			// scroll to element
-			if (state.active.is(index)) {
-				scrollElementIntoView(index);
-			}
+		if (state.active.is(index)) {
+			scrollElementIntoView(index);
 		}
 	});
 });
