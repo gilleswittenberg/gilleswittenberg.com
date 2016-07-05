@@ -64,6 +64,10 @@ body.no-js article .content {
 	display: block;
 }
 
+article.-is-expanded {
+	margin-bottom: 18px;
+}
+
 article.-is-active .content, article.-is-expanded .content {
 	display: block;
 }
@@ -89,7 +93,7 @@ button.expand {
 	outline: none;
 	background: none;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 14px;
 	padding: 2px;
 	line-height: 13px;
 }
