@@ -145,6 +145,13 @@ function scrollElementIntoView (index) {
 	window.scrollTo(0, top);
 }
 
+// initialize from location hash
+
+var namesIndex = names.indexOf(window.location.hash.replace(/^#/, ''));
+if (namesIndex > -1) {
+	state.dispatch('TOGGLE_ACTIVE', { index: namesIndex });
+}
+
 
 // listeners
 
