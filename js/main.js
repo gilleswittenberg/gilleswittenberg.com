@@ -1,3 +1,7 @@
+(function (window, document) {
+
+'use strict';
+
 // utils
 
 function changeLocationHash (str) {
@@ -186,3 +190,5 @@ if (namesIndex > -1) {
 elements.button.addEventListener('click', function (event) {
 	state.dispatch('OPEN_ALL');
 });
+
+}(window, document));

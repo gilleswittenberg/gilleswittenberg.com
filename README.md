@@ -2,9 +2,8 @@
 
 ## TODO
 
-- wrap JS in anonymous function
-- expand arrow hit area
 - check modern JS
+- expand arrow hit area
 - font-sizes, font-weights, line-height for different fonts 
 - spacing vertical under navs
 
