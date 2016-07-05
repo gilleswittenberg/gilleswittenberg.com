@@ -2,15 +2,14 @@
 
 ## TODO
 
-- check modern JS
-- expand arrow hit area
 - font-sizes, font-weights, line-height for different fonts 
 - spacing vertical under navs
+- clean up
 
 - Facebook OG + Twitter Card
 
 - archiving older versions
+- minification (HTML, CSS, JS) `src` and `dist` folders
 - server + AWS S3 hosting + domain + deploy
-- minification (HTML, CSS, JS)
 
 - LinkedIn, Facebook, Twitter

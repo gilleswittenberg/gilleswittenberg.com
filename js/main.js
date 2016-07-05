@@ -56,7 +56,7 @@ var state = {
 		has: function (index) {
 			return this.state.indexOf(index) > -1;
 		},
-		hasAll: function (index) {
+		hasAll: function () {
 			var hasAll = true;
 			indexes.forEach(function (i) {
 				if (!this.has(i)) {
@@ -198,7 +198,7 @@ if (namesIndex > -1) {
 	});
 });
 
-elements.button.addEventListener('click', function (event) {
+elements.button.addEventListener('click', function () {
 	state.dispatch('OPEN_ALL');
 });
 
