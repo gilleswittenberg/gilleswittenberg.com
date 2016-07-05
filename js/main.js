@@ -1,5 +1,12 @@
+// utils
+
+function changeLocationHash (str) {
+	var hash = '/' + (str ? '#' + str : '');
+	history.replaceState(undefined, undefined, hash);
+}
 
 // initialize
+// @TODO: Move out of async script
 
 document.body.classList.remove('no-js');
 
@@ -113,6 +120,7 @@ var render = {
 
 	all: function () {
 		this.activeAndOpen();
+		this.locationHash();
 		this.button();
 	},
 
@@ -135,6 +143,11 @@ var render = {
 				article.classList.remove(classNameExpanded);
 			}
 		});
+	},
+
+	locationHash: function () {
+		var activeName = names[state.active.state];
+		changeLocationHash(activeName);
 	},
 
 	button: function () {
