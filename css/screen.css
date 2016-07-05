@@ -80,6 +80,10 @@ article.-is-active .content, article.-is-expanded .content {
     text-overflow: ellipsis;
 }
 
+.content span.small {
+	font-size: 8px;
+}
+
 button.expand {
 	border: none;
 	outline: none;

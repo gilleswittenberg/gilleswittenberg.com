@@ -6,7 +6,6 @@
 - expand arrow hit area
 - check modern JS
 - font-sizes, font-weights, line-height for different fonts 
-- KVK + BTW info
 - favicon
 - Facebook OG + Twitter Card
 - remove hardcoded @ from mailto address

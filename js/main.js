@@ -4,6 +4,14 @@
 document.body.classList.remove('no-js');
 
 
+// email
+
+var emailElement = document.querySelector('#email');
+var email = emailElement.text.replace(/\s/g, '').replace('[at]', '@').replace('[dot]', '.');
+emailElement.text = email;
+emailElement.setAttribute('href', 'mailto:' + email);
+
+
 // DOM elements
 
 var elements = {
