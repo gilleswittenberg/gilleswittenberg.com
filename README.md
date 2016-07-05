@@ -2,8 +2,6 @@
 
 ## TODO
 
-- hash change
-- remove no-js immediately (no async)
 - wrap JS in anonymous function
 - expand arrow hit area
 - check modern JS

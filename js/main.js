@@ -5,11 +5,6 @@ function changeLocationHash (str) {
 	history.replaceState(undefined, undefined, hash);
 }
 
-// initialize
-// @TODO: Move out of async script
-
-document.body.classList.remove('no-js');
-
 
 // email
 
