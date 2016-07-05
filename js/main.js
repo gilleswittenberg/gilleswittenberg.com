@@ -4,7 +4,7 @@
 
 // feature detection
 
-if (document.body.classList === undefined || document.addEventListener === undefined || document.querySelector === undefined) {
+if (/no\-js/.test(document.body.className)) {
 	return;
 }
 
