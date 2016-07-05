@@ -72,8 +72,17 @@ article.-is-active .content, article.-is-expanded .content {
 	font-size: 16px;
 }
 
+/* @TODO: Use line-height? */
 .content li {
 	margin-bottom: 8px;
+}
+
+.content li a {
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 button.expand {

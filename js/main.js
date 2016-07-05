@@ -1,15 +1,3 @@
-// utilities
-
-function setLocationHash (str) {
-	var hash = '';
-	// cast to string
-	if (str) hash = str + '';
-	if (hash !== '') { 
-		hash = '#' + hash;
-	}
-	hash = '/' + hash;
-	history.replaceState(undefined, undefined, hash);
-}
 
 // initialize
 
@@ -30,8 +18,7 @@ var indexes = [];
 var names = [];
 elements.articles.forEach(function (article, index) {
 	indexes.push(index);
-	var a = article.querySelector('nav');
-	names.push(a.getAttribute('id'));
+	names.push(article.getAttribute('id'));
 });
 
 
@@ -66,13 +53,6 @@ var state = {
 			var i = this.state.indexOf(index);
 			this.state.splice(i, 1);
 		},
-		toggle: function (index) {
-			if (this.has(index)) {
-				this.unset(index);
-			} else {
-				this.set(index);
-			}
-		},
 		setAll: function () {
 			indexes.forEach(function (i) {
 				this.set(i);
@@ -96,14 +76,7 @@ var state = {
 			if (this.state === null) return;
 
 			this.state = null;
-		},
-		toggle: function (index) {
-			if (this.is(index)) {
-				this.unset();
-			} else {
-				this.set(index);
-			}
-		}
+		}	
 	},
 
 	dispatch: function (action, attributes) {
@@ -113,9 +86,11 @@ var state = {
 			break;
 		case 'TOGGLE_ACTIVE':
 			if (this.open.has(attributes.index)) {
+				this.active.unset();
 				this.open.unset(attributes.index);
 			} else {
-				this.active.toggle(attributes.index);
+				this.active.set(attributes.index);
+				this.open.set(attributes.index);
 			}
 			break;
 		}
@@ -130,13 +105,7 @@ var render = {
 
 	all: function () {
 		this.activeAndOpen();
-		this.locationHash();
 		this.button();
-	},
-
-	locationHash: function () {
-		var hash = state.active.state !== null ? names[state.active.state] : null;
-		setLocationHash(hash);
 	},
 
 	activeAndOpen: function () {
@@ -171,6 +140,12 @@ var render = {
 };
 
 
+function scrollElementIntoView (index) {
+	var top = elements.articles[index].offsetTop;
+	window.scrollTo(0, top);
+}
+
+
 // listeners
 
 [].forEach.call(elements.articles, function (article, index) {
@@ -178,6 +153,10 @@ var render = {
 		event.preventDefault();
 		if (event.target.nodeName === 'A') {
 			state.dispatch('TOGGLE_ACTIVE', { index: index });
+			// scroll to element
+			if (state.active.is(index)) {
+				scrollElementIntoView(index);
+			}
 		}
 	});
 });
