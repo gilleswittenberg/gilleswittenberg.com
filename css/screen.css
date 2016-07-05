@@ -1,24 +1,22 @@
 body {
 	/* @LINK: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/ */
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	color: #333;
 	margin: 0;
-}
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-weight: 200;
+	line-height: 1.4em;
+	color: #333;
 
-h1, h2, a {
-	font-size: 1.8em;
 }
 
 h1 {
+	font-size: 1.8em;
+	line-height: 1.8em;
 	font-weight: 400;
 }
 
-h2, a {
-	font-weight: 300;
-}
-
 h2 {
-	font-style: italic;
+	font-size: 1em;
+	line-height: 1.4em;
 	font-weight: 100;
 }
 
@@ -45,12 +43,14 @@ a:hover, a:active, a:focus {
 p {
 	margin: 0;
 	line-height: 1.7em;
-	text-align: justify;
 }
 
 main > ul > li > article > nav > a {
 	display: inline-block;
 	text-decoration: none;
+	font-size: 1.8em;
+	font-weight: 300;
+	line-height: 1.8em;
 }
 main > ul > li > article.-is-active > nav > a {
 	text-decoration: underline;
@@ -72,11 +72,6 @@ article.-is-active .content, article.-is-expanded .content {
 	font-size: 16px;
 }
 
-/* @TODO: Use line-height? */
-.content li {
-	margin-bottom: 8px;
-}
-
 .content li a {
 	display: inline-block;
 	width: 100%;
@@ -90,7 +85,7 @@ button.expand {
 	outline: none;
 	background: none;
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 16px;
 	padding: 2px;
 	line-height: 13px;
 }
@@ -107,7 +102,7 @@ body.no-js button.expand {
 
 div.wrap {
 	margin: 0 auto;
-	padding: 48px 36px;
+	padding: 18px 36px 54px;
 	max-width: 600px;
 }
 
