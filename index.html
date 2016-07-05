@@ -10,7 +10,11 @@
 </head>
 <body class="no-js">
 
-	<script> document.body.classList.remove('no-js'); </script>
+	<script> 
+	if (document.body.classList !== undefined && document.addEventListener !== undefined && document.querySelector !== undefined) {
+		document.body.classList.remove('no-js'); 
+	}
+	</script>
 
 	<div class="wrap">
 

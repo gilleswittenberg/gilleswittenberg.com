@@ -2,11 +2,22 @@
 
 'use strict';
 
+// feature detection
+
+if (document.body.classList === undefined || document.addEventListener === undefined || document.querySelector === undefined) {
+	return;
+}
+
+
 // utils
 
 function changeLocationHash (str) {
+	// guard feature detection
+	if (!window.history || typeof window.history.replaceState !== 'function') {
+		return;
+	}
 	var hash = '/' + (str ? '#' + str : '');
-	history.replaceState(undefined, undefined, hash);
+	window.history.replaceState(undefined, undefined, hash);
 }
 
 
