@@ -187,7 +187,7 @@ if (namesIndex > -1) {
 // listeners
 
 [].forEach.call(elements.articles, function (article, index) {
-	var anchor = article.querySelector('nav a');
+	var anchor = article.querySelector('h3 a');
 	anchor.addEventListener('click', function (event) {
 		event.preventDefault();
 		state.dispatch('TOGGLE_ACTIVE', { index: index });

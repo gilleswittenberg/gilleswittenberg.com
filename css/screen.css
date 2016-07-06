@@ -26,7 +26,7 @@ ul {
 	margin: 0;
 }
 
-h1, h2, main > ul > li > article > nav > a, .content, button.expand {
+h1, h2, main > ul > li > article > h3 > a, .content, button.expand {
 	margin-top: 36px;
 	margin-bottom: 0;
 }
@@ -45,14 +45,18 @@ p {
 	line-height: 1.7em;
 }
 
-main > ul > li > article > nav > a {
+main > ul > li > article > h3 {
+	font-size: 1em;
+	margin: 0;
+}
+main > ul > li > article > h3 > a {
 	display: inline-block;
 	text-decoration: none;
 	font-size: 1.8em;
 	font-weight: 300;
 	line-height: 1.8em;
 }
-main > ul > li > article.-is-active > nav > a {
+main > ul > li > article.-is-active > h3 > a {
 	text-decoration: underline;
 }
 
