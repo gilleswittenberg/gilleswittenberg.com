@@ -9,13 +9,13 @@ body {
 
 h1 {
 	font-size: 1.8em;
-	line-height: 1.8em;
+	line-height: 1em;
 	font-weight: 400;
 }
 
 h2 {
 	font-size: 1em;
-	line-height: 1.4em;
+	line-height: 1.8em;
 	font-weight: 100;
 }
 
@@ -52,8 +52,8 @@ main > ul > li > article > h3 > a {
 	display: inline-block;
 	text-decoration: none;
 	font-size: 1.8em;
+	line-height: 1em;
 	font-weight: 300;
-	line-height: 1.8em;
 }
 main > ul > li > article.-is-active > h3 > a {
 	text-decoration: underline;
