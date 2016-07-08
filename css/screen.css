@@ -5,7 +5,6 @@ body {
 	font-weight: 200;
 	line-height: 1.4em;
 	color: #333;
-
 }
 
 h1 {
@@ -40,7 +39,7 @@ a:hover, a:active, a:focus {
 	outline: 0;
 }
 
-p {
+p, li {
 	margin: 0;
 	line-height: 1.7em;
 }
@@ -80,16 +79,19 @@ article.-is-active .content, article.-is-expanded .content {
 	font-size: 16px;
 }
 
-.content li a {
-	display: inline-block;
+.content li {
 	width: 100%;
 	overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.content span.small {
-	font-size: 8px;
+.content .light {
+	color: #AAA;
+}
+
+.content .abbr {
+	border-bottom: 1px dotted;
 }
 
 button.expand {
@@ -110,6 +112,16 @@ body.no-js button.expand {
 
 .-is-hidden {
 	display: none;
+}
+@media (max-width: 671px) {
+	.-is-hidden-mobile {
+		display: none;
+	}
+}
+@media (min-width: 672px) {
+	.-is-hidden-desktop {
+		display: none;
+	}
 }
 
 div.wrap {
