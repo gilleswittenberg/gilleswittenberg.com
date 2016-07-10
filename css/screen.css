@@ -28,7 +28,7 @@ ul {
 }
 
 h1, h2, main > ul > li > article > h3 > a, .content, button.expand {
-	margin-top: 36px;
+	margin-top: 48px;
 	margin-bottom: 0;
 }
 
@@ -132,7 +132,7 @@ body.no-js button.expand {
 
 div.wrap {
 	margin: 0 auto;
-	padding: 18px 36px 54px;
+	padding: 36px 36px 54px;
 	max-width: 600px;
 }
 

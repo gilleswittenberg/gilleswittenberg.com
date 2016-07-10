@@ -2,7 +2,6 @@
 
 ## TODO
 
-- increase spacing vertical
 - remove focus on close + increase visual difference between :active and :visited 
 - link underlining + hover
 - clean up
