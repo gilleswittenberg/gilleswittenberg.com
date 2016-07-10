@@ -11,9 +11,29 @@
 <body class="no-js">
 
 	<script> 
+	// test js
 	if (document.body.classList !== undefined && document.addEventListener !== undefined && document.querySelector !== undefined) {
 		document.body.classList.remove('no-js'); 
 	}
+
+	// test touch
+	// @LINK: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/touchevents.js
+	(function (window, document) {
+		var bool = false;
+	    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+	      bool = true;
+	    } else {
+	      // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+	      // https://git.io/vznFH
+	      var query = ['@media (', prefixes.join('touch-enabled),('), 'heartz', ')', '{#modernizr{top:9px;position:absolute}}'].join('');
+	      testStyles(query, function(node) {
+	        bool = node.offsetTop === 9;
+	      });
+	    }
+	    if (bool) {
+	    	document.body.classList.add('touch');
+	    }
+	}(window, document));
 	</script>
 
 	<div class="wrap">

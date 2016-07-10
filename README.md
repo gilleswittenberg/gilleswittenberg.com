@@ -2,12 +2,11 @@
 
 ## TODO
 
-- font-sizes, font-weights, line-height for different fonts 
-- spacing vertical under navs
+- increase spacing vertical
 - remove focus on close + increase visual difference between :active and :visited 
-- link underlining
+- link underlining + hover
 - clean up
-- Aria
+- ARIA
 
 - Facebook OG + Twitter Card
 
