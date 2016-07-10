@@ -11,26 +11,16 @@
 <body class="no-js">
 
 	<script> 
-	// test for js
-	if (document.body.classList !== undefined && document.addEventListener !== undefined && document.querySelector !== undefined) {
-		document.body.classList.remove('no-js'); 
-	}
-
-	// test for touch
-	// @LINK: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/touchevents.js
 	(function (window, document) {
-		var bool = false;
+
+		// test for js
+		if (document.body.classList !== undefined && document.addEventListener !== undefined && document.querySelector !== undefined) {
+			document.body.classList.remove('no-js'); 
+		}
+
+		// test for touch
+		// @LINK: https://github.com/Modernizr/Modernizr/blob/master/feature-detects/touchevents.js
 	    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-	      bool = true;
-	    } else {
-	      // include the 'heartz' as a way to have a non matching MQ to help terminate the join
-	      // https://git.io/vznFH
-	      var query = ['@media (', prefixes.join('touch-enabled),('), 'heartz', ')', '{#modernizr{top:9px;position:absolute}}'].join('');
-	      testStyles(query, function(node) {
-	        bool = node.offsetTop === 9;
-	      });
-	    }
-	    if (bool) {
 	    	document.body.classList.add('touch');
 	    }
 	}(window, document));
@@ -72,11 +62,11 @@
 						<h3><a href="#contact" tabindex="2">contact</a></h3>
 						<div class="content">
 							<ul>
-								<li>Mr. Gilles Wittenberg <span class="-is-hidden-desktop">(1982 NL)</span><span class="-is-hidden-mobile">(1982 Amsterdam, NL)</span></li>
+								<li>Mr. Gilles Wittenberg <span class="-is-hidden-large">(1982 NL)</span><span class="-is-hidden-small">(1982 Amsterdam, NL)</span></li>
 								<li><a href="#" id="email">mail [at] gilleswittenberg [dot] com</a></li>
 								<li><a href="tel:+31625188765">+31 (0) 6 25 18 87 65</a></li>
-								<li><span class="abbr" title="Kamer van Koophandel / Chamber Of Commerce">KvK / COC</span>: 34293977, <span class="-is-hidden-mobile">Amsterdam</span><span class="-is-hidden-desktop">A'dam</span></li>
-								<li><span class="abbr" title="BTW nummer / Value Added Tax number">BTW / VAT</span>: NL132156684.B01</li>
+								<li><span class="abbreviation" title="Kamer van Koophandel / Chamber Of Commerce">KvK / COC</span>: 34293977, <span class="-is-hidden-large">A'dam</span><span class="-is-hidden-small">Amsterdam</span></li>
+								<li><span class="abbreviation" title="BTW nummer / Value Added Tax number">BTW / VAT</span>: NL132156684.B01</li>
 							</ul>
 						</div>
 					</article>

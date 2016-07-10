@@ -92,11 +92,11 @@ article.-is-active .content, article.-is-expanded .content {
 	color: #AAA;
 }
 
-.content .abbr {
+.content .abbreviation {
 	border-bottom: 1px dotted;
 }
 
-body.touch .content .abbr {
+body.touch .content .abbreviation {
 	border-bottom: none;
 }
 
@@ -120,12 +120,12 @@ body.no-js button.expand {
 	display: none;
 }
 @media (max-width: 671px) {
-	.-is-hidden-mobile {
+	.-is-hidden-small {
 		display: none;
 	}
 }
 @media (min-width: 672px) {
-	.-is-hidden-desktop {
+	.-is-hidden-large {
 		display: none;
 	}
 }
