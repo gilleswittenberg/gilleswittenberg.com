@@ -1,0 +1,1 @@
+aws s3 --profile gilleswittenberg sync . s3://gilleswittenberg.com/ --exclude=".git/*" --exclude=".eslintrc.js" --exclude="deploy" --exclude="README.md"
