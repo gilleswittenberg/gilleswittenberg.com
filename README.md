@@ -12,12 +12,6 @@
 
 ## TODO
 
-- Delete Heroku
-- Delete www.gilleswittenberg.com GitHub repository
-
-- minification (HTML, CSS, JS) `src` and `dist` folders
 - visited, focused colors, underlining links and hovers
-
 - LinkedIn, Facebook, Twitter
-
 - DNS using AWS Route 53
