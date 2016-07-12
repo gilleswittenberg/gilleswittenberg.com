@@ -2,8 +2,7 @@
 
 ## TODO
 
-- clean up
-- ARIA
+- visited, focused colors, underlining links and hovers
 
 - Facebook OG + Twitter Card
 
