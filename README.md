@@ -12,6 +12,9 @@
 
 ## TODO
 
+- Fix stretching expand button character
 - visited, focused colors, underlining links and hovers
-- LinkedIn, Facebook, Twitter
+- LinkedIn
+- OG image dimensions
+- Transparent favicon + social images
 - DNS using AWS Route 53

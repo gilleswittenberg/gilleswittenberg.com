@@ -41,7 +41,7 @@ var elements = {
 
 var indexes = [];
 var names = [];
-elements.articles.forEach(function (article, index) {
+[].forEach.call(elements.articles, function (article, index) {
 	indexes.push(index);
 	names.push(article.getAttribute('id'));
 });
