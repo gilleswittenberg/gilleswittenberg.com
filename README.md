@@ -12,9 +12,11 @@
 
 ## TODO
 
+- Remove social images
+- Versioning CSS, JS, Favicon, Images
+- Transparent favicon
 - Fix stretching expand button character
 - visited, focused colors, underlining links and hovers
+- Hover span abbreviation
 - LinkedIn
-- OG image dimensions
-- Transparent favicon + social images
 - DNS using AWS Route 53
