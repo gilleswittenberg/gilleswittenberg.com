@@ -13,10 +13,15 @@
 ## TODO
 
 - Remove social images
+- Gulp watch
+- Serve
 - Versioning CSS, JS, Favicon, Images
+- Bottom spacing
 - Transparent favicon
 - Fix stretching expand button character
-- visited, focused colors, underlining links and hovers
-- Hover span abbreviation
+- Visited, focused colors, underlining links and hovers
+- Remove hover color
+- Remove body color
+- Hover span abbreviation (cursor to info)
 - LinkedIn
 - DNS using AWS Route 53
