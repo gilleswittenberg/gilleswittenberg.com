@@ -12,8 +12,6 @@
 
 ## TODO
 
-- Remove social images
-- Gulp watch
 - Serve
 - Versioning CSS, JS, Favicon, Images
 - Bottom spacing

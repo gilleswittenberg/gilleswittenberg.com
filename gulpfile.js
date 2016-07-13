@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var minify = require('gulp-minifier');
 
-gulp.task('default', function () {
+gulp.task('minify', function () {
 	return gulp.src(['src/**/*']).pipe(minify({
 	    minify: true,
 	    collapseWhitespace: true,
@@ -14,3 +14,9 @@ gulp.task('default', function () {
 	    }
 	})).pipe(gulp.dest('dist'));
 });
+
+gulp.task('watch', function () {
+  gulp.watch('./src/**/*', ['minify']);
+});
+
+gulp.task('default', ['minify']);
