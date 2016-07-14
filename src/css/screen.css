@@ -131,12 +131,12 @@ body.no-js button.expand {
 
 div.wrap {
 	margin: 0 auto;
-	padding: 36px 36px 54px;
+	padding: 36px 36px 84px;
 	max-width: 600px;
 }
 
 @media (min-width: 672px) {
 	div.wrap {
-		padding: 72px;
+		padding: 72px 72px 120px;
 	}
 }
