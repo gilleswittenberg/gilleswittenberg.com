@@ -12,7 +12,6 @@
 
 ## TODO
 
-- Remove www. + titles under links
 - Fix stretching expand button character
 - Visited, focused colors, underlining links and hovers
 - Remove hover color
