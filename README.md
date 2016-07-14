@@ -20,6 +20,7 @@
 - Visited, focused colors, underlining links and hovers
 - Remove hover color
 - Remove body color
+- Remove www. + titles under links
 - Hover span abbreviation (cursor to info)
 - LinkedIn
 - DNS using AWS Route 53

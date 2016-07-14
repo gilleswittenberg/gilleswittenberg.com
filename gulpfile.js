@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var minify = require('gulp-minifier');
+var serve = require('gulp-serve');
 
 gulp.task('minify', function () {
 	return gulp.src(['src/**/*']).pipe(minify({
@@ -19,4 +20,6 @@ gulp.task('watch', function () {
   gulp.watch('./src/**/*', ['minify']);
 });
 
-gulp.task('default', ['minify']);
+gulp.task('serve', serve('dist'));
+
+gulp.task('dev', ['serve', 'watch']);
