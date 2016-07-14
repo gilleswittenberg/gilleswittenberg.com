@@ -12,8 +12,6 @@
 
 ## TODO
 
-- Serve
-- Versioning CSS, JS, Favicon, Images
 - Bottom spacing
 - Transparent favicon
 - Fix stretching expand button character
