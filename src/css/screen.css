@@ -25,18 +25,17 @@ ul {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	outline: none;
+}
+a:hover, a:active, a:focus {
+	text-decoration: underline;
+}
+
 h1, h2, main > ul > li > article > h3 > a, .content, button.expand {
 	margin-top: 48px;
 	margin-bottom: 0;
-}
-
-a {
-	transition: color .3s ease-out;
-}
-
-a:hover, a:active, a:focus {
-	color: #333;
-	outline: 0;
 }
 
 p, li {
@@ -51,12 +50,14 @@ main > ul > li > article > h3 {
 main > ul > li > article > h3 > a {
 	display: inline-block;
 	text-decoration: none;
+	color: inherit;
 	font-size: 1.8em;
 	line-height: 1em;
 	font-weight: 300;
 }
-main > ul > li > article.-is-active > h3 > a {
-	text-decoration: underline;
+main > ul > li > article > h3 > a:hover, main > ul > li > article > h3 > a:active, main > ul > li > article > h3 > a:focus {
+	text-decoration: none;
+	border-bottom: 1px solid;
 }
 
 .content {

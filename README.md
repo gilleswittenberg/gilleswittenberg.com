@@ -12,10 +12,9 @@
 
 ## TODO
 
-- Fix stretching expand button character
 - Visited, focused colors, underlining links and hovers
-- Remove hover color
-- Remove body color
 - Hover span abbreviation (cursor to info)
+- Fix stretching expand button character
+
 - LinkedIn
 - DNS using AWS Route 53
