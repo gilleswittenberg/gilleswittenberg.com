@@ -12,10 +12,10 @@
 
 ## TODO
 
-- Contact display. Remove braces. Surround translations with braces.
 - Fix stretching expand button character
 - Remove Javascript `active`?
 - Remove hash scrolling?
+- Spacing phones
 
 - LinkedIn
 - DNS using AWS Route 53
