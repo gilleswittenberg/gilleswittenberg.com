@@ -87,18 +87,6 @@ article.-is-active .content, article.-is-expanded .content {
     text-overflow: ellipsis;
 }
 
-.content .light {
-	color: #AAA;
-}
-
-.content .abbreviation {
-	border-bottom: 1px dotted;
-}
-
-body.touch .content .abbreviation {
-	border-bottom: none;
-}
-
 button.expand {
 	border: none;
 	outline: none;
