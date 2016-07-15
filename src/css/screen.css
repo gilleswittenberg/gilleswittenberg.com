@@ -55,9 +55,13 @@ main > ul > li > article > h3 > a {
 	line-height: 1em;
 	font-weight: 300;
 }
-main > ul > li > article > h3 > a:hover, main > ul > li > article > h3 > a:active, main > ul > li > article > h3 > a:focus {
+main > ul > li > article > h3 > a:hover, 
+main > ul > li > article > h3 > a:active {
 	text-decoration: none;
-	border-bottom: 1px solid;
+}
+main > ul > li > article > h3 > a:focus {
+	text-decoration: none;
+	border-bottom: solid 1px #333;
 }
 
 .content {
@@ -97,9 +101,11 @@ button.expand {
 	padding: 2px;
 	line-height: 13px;
 }
-button.expand:hover {
-	color: #000;
+
+button.expand:focus {
+	border-bottom: solid 1px #333;
 }
+
 body.no-js button.expand {
 	display: none;
 }

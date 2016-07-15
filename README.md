@@ -12,13 +12,10 @@
 
 ## TODO
 
-- :focus, :active and remove hover .active menu and button.expand (blue underline)
-- Remove Javascript `active`
-- Remove tab-indexes
-- button.expand title?
-- titles menu links
 - Contact display. Remove braces. Surround translations with braces.
 - Fix stretching expand button character
+- Remove Javascript `active`?
+- Remove hash scrolling?
 
 - LinkedIn
 - DNS using AWS Route 53
