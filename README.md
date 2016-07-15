@@ -3,7 +3,7 @@
 ## Hosting
 
 - AWS S3 Hosting (http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
-- AWS Account: amazon.com@gilleswittenberg.com
+- AWS Account: amazon [dot] com [at] gilleswittenberg [dot] com
 - AWS Region: Frankfurt
 - AWS S3 Bucket names: gilleswittenberg.com, www.gilleswittenberg.com
 - DNS www.gilleswittenberg.com CNAME gilleswittenberg.com.s3-website.eu-central-1.amazonaws.com
@@ -12,8 +12,7 @@
 
 ## TODO
 
-- Visited, focused colors, underlining links and hovers
-- Hover span abbreviation (cursor to info)
+- :focus, :active and remove .active menu and button.expand
 - Fix stretching expand button character
 
 - LinkedIn
