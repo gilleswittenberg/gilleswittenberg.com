@@ -16,6 +16,7 @@
 - Spacing, font-sizes mobile
 - Remove zooming iOS
 - Scroll all content in view after expanding (if below the fold)
+- Use Array.prototype. instead of [].
 
 - LinkedIn
 - DNS using AWS Route 53

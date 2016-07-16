@@ -36,6 +36,12 @@ var elements = {
 	button: document.querySelector('aside > button')
 };
 
+var indexes = [];
+[].forEach.call(elements.articles, function (_, index) { 
+	indexes.push(index);
+});
+
+
 // state
 
 var state = {
