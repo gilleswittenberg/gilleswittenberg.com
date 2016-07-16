@@ -5,7 +5,14 @@ body {
 	font-weight: 300;
 	line-height: 1.4em;
 	color: #333;
+	font-size: 1.2em;
 }
+@media (min-width: 672px) {
+	body {
+		font-size: 1em;
+	}
+}
+
 
 h1 {
 	font-size: 1.8em;
@@ -128,8 +135,8 @@ button.expand {
 	outline: none;
 	background: none;
 	cursor: pointer;
-	font-size: 14px;
 	padding: 2px;
+	font-size: 1em;
 	line-height: 13px;
 }
 
@@ -154,7 +161,7 @@ body.no-js button.expand {
 div.wrap {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 27px 36px 54px;
+	padding: 27px 20px 54px;
 }
 
 @media (min-width: 672px) {
