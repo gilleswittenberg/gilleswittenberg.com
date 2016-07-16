@@ -26,7 +26,8 @@ function changeLocationHash (str) {
 // email
 
 var emailElement = document.querySelector('#email');
-var email = emailElement.textContent.replace(/\s/g, '').replace('[at]', '@').replace('[dot]', '.');
+var emailText = emailElement.textContent || emailElement.innerText;
+var email = emailText.replace(/\s/g, '').replace('[at]', '@').replace('[dot]', '.');
 var anchorElement = document.createElement('a');
 anchorElement.textContent = email;
 anchorElement.setAttribute('title', emailElement.getAttribute('title'));

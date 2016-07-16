@@ -17,6 +17,7 @@
 - Gulp ESLint
 - Clean up vertical spacing
 - textContent IE8
+- Contact translations italic
 
 
 
