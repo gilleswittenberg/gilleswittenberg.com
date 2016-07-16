@@ -96,7 +96,6 @@ button.expand {
 	outline: none;
 	background: none;
 	cursor: pointer;
-	font-family: Arial, sans-serif;
 	font-size: 14px;
 	padding: 2px;
 	line-height: 13px;
@@ -125,9 +124,9 @@ body.no-js button.expand {
 }
 
 div.wrap {
+	max-width: 600px;
 	margin: 0 auto;
 	padding: 36px 36px 84px;
-	max-width: 600px;
 }
 
 @media (min-width: 672px) {

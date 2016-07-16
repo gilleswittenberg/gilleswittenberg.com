@@ -12,10 +12,10 @@
 
 ## TODO
 
-- Fix stretching expand button character
 - Remove Javascript `active`?
 - Remove hash scrolling?
-- Spacing phones
+- Spacing, font-sizes mobile
+- Remove zooming iOS
 
 - LinkedIn
 - DNS using AWS Route 53
