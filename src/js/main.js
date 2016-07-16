@@ -96,7 +96,6 @@ var state = {
 				this.expanded.unset(attributes.index);
 			} else {
 				this.expanded.set(attributes.index);
-				console.log(attributes.index);
 				this.scrollTo = attributes.index;
 			}
 			break;
