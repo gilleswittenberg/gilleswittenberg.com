@@ -12,8 +12,6 @@
 
 ## TODO
 
-- Remove Javascript `active`?
-- Remove hash scrolling?
 - Spacing, font-sizes mobile
 - Remove zooming iOS
 

@@ -36,22 +36,11 @@ var elements = {
 	button: document.querySelector('aside > button')
 };
 
-
-// indexes range and names
-
-var indexes = [];
-var names = [];
-[].forEach.call(elements.articles, function (article, index) {
-	indexes.push(index);
-	names.push(article.getAttribute('id'));
-});
-
-
 // state
 
 var state = {
 
-	open: {
+	expanded: {
 		state: [],
 		has: function (index) {
 			return this.state.indexOf(index) > -1;
@@ -85,37 +74,16 @@ var state = {
 		}
 	},
 
-	active: { 
-		state: null,
-		is: function (index) {
-			return this.state === index;
-		},
-		set: function (index) {
-			// guard
-			if (this.state === index) return;
-
-			this.state = index;
-		},
-		unset: function () {
-			// guard
-			if (this.state === null) return;
-
-			this.state = null;
-		}	
-	},
-
 	dispatch: function (action, attributes) {
 		switch (action) {
-		case 'OPEN_ALL':
-			this.open.setAll();
+		case 'EXPAND_ALL':
+			this.expanded.setAll();
 			break;
-		case 'TOGGLE_ACTIVE':
-			if (this.open.has(attributes.index)) {
-				this.active.unset();
-				this.open.unset(attributes.index);
+		case 'TOGGLE_EXPANDED':
+			if (this.expanded.has(attributes.index)) {
+				this.expanded.unset(attributes.index);
 			} else {
-				this.active.set(attributes.index);
-				this.open.set(attributes.index);
+				this.expanded.set(attributes.index);
 			}
 			break;
 		}
@@ -129,25 +97,16 @@ var state = {
 var render = {
 
 	all: function () {
-		this.activeAndOpen();
-		this.locationHash();
+		this.expanded();
 		this.button();
 	},
 
-	activeAndOpen: function () {
+	expanded: function () {
 		[].forEach.call(elements.articles, function (article, index) {
 
-			// active
-			var classNameActive = '-is-active';
-			if (state.active.is(index)) {
-				article.classList.add(classNameActive);
-			} else {
-				article.classList.remove(classNameActive);
-			}
-
-			// open
+			// expanded
 			var classNameExpanded = '-is-expanded';
-			if (state.open.has(index)) {
+			if (state.expanded.has(index)) {
 				article.classList.add(classNameExpanded);
 			} else {
 				article.classList.remove(classNameExpanded);
@@ -155,14 +114,9 @@ var render = {
 		});
 	},
 
-	locationHash: function () {
-		var activeName = names[state.active.state];
-		changeLocationHash(activeName);
-	},
-
 	button: function () {
 		var className = '-is-hidden';
-		if (state.open.hasAll()) {
+		if (state.expanded.hasAll()) {
 			elements.button.classList.add(className);
 		} else {
 			elements.button.classList.remove(className);
@@ -170,36 +124,18 @@ var render = {
 	}
 };
 
-
-function scrollElementIntoView (index) {
-	var top = elements.articles[index].offsetTop;
-	window.scrollTo(0, top);
-}
-
-// initialize from location hash
-
-var namesIndex = names.indexOf(window.location.hash.replace(/^#/, ''));
-if (namesIndex > -1) {
-	state.dispatch('TOGGLE_ACTIVE', { index: namesIndex });
-}
-
-
 // listeners
 
 [].forEach.call(elements.articles, function (article, index) {
 	var anchor = article.querySelector('h3 a');
 	anchor.addEventListener('click', function (event) {
 		event.preventDefault();
-		state.dispatch('TOGGLE_ACTIVE', { index: index });
-		// scroll to element
-		if (state.active.is(index)) {
-			scrollElementIntoView(index);
-		}
+		state.dispatch('TOGGLE_EXPANDED', { index: index });
 	});
 });
 
 elements.button.addEventListener('click', function () {
-	state.dispatch('OPEN_ALL');
+	state.dispatch('EXPAND_ALL');
 });
 
 }(window, document));

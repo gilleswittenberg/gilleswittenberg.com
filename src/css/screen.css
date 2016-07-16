@@ -76,7 +76,7 @@ article.-is-expanded {
 	margin-bottom: 18px;
 }
 
-article.-is-active .content, article.-is-expanded .content {
+article.-is-expanded .content {
 	display: block;
 }
 
