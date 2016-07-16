@@ -12,9 +12,14 @@
 
 ## TODO
 
-- Spacing, font-sizes mobile
-- Remove zooming iOS
 - Scroll all content in view after expanding (if below the fold)
+- KvK, BTW titles
+- Wrap email with A element using JavaScript 
+- Change Hash using JavaScript
+- Vertical spacing mobile + font-sizes
+- Gulp ESLint
+
+
 
 - LinkedIn
 - DNS using AWS Route 53

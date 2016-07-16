@@ -80,16 +80,21 @@ var state = {
 		}
 	},
 
+	scrollTo: null,
+
 	dispatch: function (action, attributes) {
 		switch (action) {
 		case 'EXPAND_ALL':
 			this.expanded.setAll();
 			break;
 		case 'TOGGLE_EXPANDED':
+			this.scrollTo = null;
 			if (this.expanded.has(attributes.index)) {
 				this.expanded.unset(attributes.index);
 			} else {
 				this.expanded.set(attributes.index);
+				console.log(attributes.index);
+				this.scrollTo = attributes.index;
 			}
 			break;
 		}
@@ -105,6 +110,7 @@ var render = {
 	all: function () {
 		this.expanded();
 		this.button();
+		this.scrollTo();
 	},
 
 	expanded: function () {
@@ -127,6 +133,19 @@ var render = {
 		} else {
 			elements.button.classList.remove(className);
 		}
+	},
+
+	scrollTo: function () {
+		// guard
+		if (state.scrollTo === null) return;
+
+		var rect = elements.articles[state.scrollTo].getBoundingClientRect();
+		var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+		// guard
+		if (rect.bottom <= windowHeight) return;
+
+		window.scrollBy(0, rect.bottom - windowHeight);
 	}
 };
 

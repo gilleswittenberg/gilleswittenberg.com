@@ -35,18 +35,33 @@ a:focus {
 	text-decoration: underline;
 }
 
-h1, h2, main > ul > li > article > h3 > a, 
-.content, 
-button.expand {
+h1, 
+h2, 
+main,
+.content {
 	margin-bottom: 0;
 	margin-top: 36px;
 }
 @media (min-width: 672px) {
-	h1, h2, main > ul > li > article > h3 > a, 
-	.content, 
-	button.expand {
+	h1, 
+	h2, 
+	main,
+	.content {
 		margin-top: 48px;
 	}
+}
+
+h1, h2 {
+	margin-top: 48px;
+}
+
+main > ul > li > article > h3 > a, 
+aside {
+	margin-top: 12px;
+}
+
+article {
+	padding-bottom: 36px;
 }
 
 p, 
@@ -78,19 +93,19 @@ button.expand:focus {
 
 .content {
 	display: none;
+	/* padding-bottom: 9px; */
 }
+
+/*
+@media (min-width: 672px) {
+	.content {
+		padding-bottom: 18px;
+	}
+}
+*/
 
 body.no-js article .content {
 	display: block;
-}
-
-article.-is-expanded {
-	margin-bottom: 9px;
-}
-@media (min-width: 672px) {
-	article.-is-expanded {
-		margin-bottom: 18px;
-	}
 }
 
 article.-is-expanded .content {
