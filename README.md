@@ -14,7 +14,6 @@
 
 - Vertical spacing mobile + font-sizes
 - Clean up vertical spacing
-- JS fallbacks and caniuse.com all 
 - Clean up
 
 - LinkedIn

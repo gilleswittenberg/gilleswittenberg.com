@@ -24,7 +24,11 @@
 	<script> 
 	// feature test Javascript
 	(function (window, document) {
-		if (document.body.classList !== undefined && document.addEventListener !== undefined && document.querySelector !== undefined) {
+		if ('classList' in document.body && 
+			'addEventListener' in document.body !== undefined && 
+			'querySelector' in document && 
+			'textContent' in document.body)
+		{
 			document.body.classList.remove('no-js'); 
 		}
 	}(window, document));

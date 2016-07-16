@@ -13,9 +13,7 @@ if (/no\-js/.test(document.body.className)) {
 
 function changeLocationHash (str) {
 	// guard feature detection
-	if (!window.history || typeof window.history.replaceState !== 'function') {
-		return;
-	}
+	if (!window.history || typeof window.history.replaceState !== 'function') return;
 	var hash = '/' + (str ? '#' + str : '');
 	window.history.replaceState(undefined, undefined, hash);
 }
@@ -24,7 +22,7 @@ function changeLocationHash (str) {
 // email
 
 var emailElement = document.querySelector('#email');
-var emailText = emailElement.textContent || emailElement.innerText;
+var emailText = emailElement.textContent;
 var email = emailText.replace(/\s/g, '').replace('[at]', '@').replace('[dot]', '.');
 var anchorElement = document.createElement('a');
 anchorElement.textContent = email;
