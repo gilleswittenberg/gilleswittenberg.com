@@ -119,6 +119,10 @@ article.-is-expanded .content {
     text-overflow: ellipsis;
 }
 
+span.translation {
+	font-size: 0.7em;
+}
+
 button.expand {
 	border: none;
 	outline: none;

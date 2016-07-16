@@ -14,12 +14,9 @@
 
 - Change Hash using JavaScript
 - Vertical spacing mobile + font-sizes
-- Gulp ESLint
 - Clean up vertical spacing
-- textContent IE8
-- Contact translations italic
-
-
+- Gulp ESLint
+- JS fallbacks and caniuse.com all 
 
 - LinkedIn
 - DNS using AWS Route 53
