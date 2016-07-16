@@ -12,7 +12,6 @@
 
 ## TODO
 
-- Scroll all content in view after expanding (if below the fold)
 - KvK, BTW titles
 - Wrap email with A element using JavaScript 
 - Change Hash using JavaScript
