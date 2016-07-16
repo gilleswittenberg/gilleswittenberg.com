@@ -38,8 +38,15 @@ a:focus {
 h1, h2, main > ul > li > article > h3 > a, 
 .content, 
 button.expand {
-	margin-top: 48px;
 	margin-bottom: 0;
+	margin-top: 36px;
+}
+@media (min-width: 672px) {
+	h1, h2, main > ul > li > article > h3 > a, 
+	.content, 
+	button.expand {
+		margin-top: 48px;
+	}
 }
 
 p, 
@@ -78,7 +85,12 @@ body.no-js article .content {
 }
 
 article.-is-expanded {
-	margin-bottom: 18px;
+	margin-bottom: 9px;
+}
+@media (min-width: 672px) {
+	article.-is-expanded {
+		margin-bottom: 18px;
+	}
 }
 
 article.-is-expanded .content {
@@ -123,7 +135,7 @@ body.no-js button.expand {
 div.wrap {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 36px 36px 84px;
+	padding: 27px 36px 54px;
 }
 
 @media (min-width: 672px) {
