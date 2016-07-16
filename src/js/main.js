@@ -11,6 +11,7 @@ if (/no\-js/.test(document.body.className)) {
 
 // utils
 
+/*
 function changeLocationHash (str) {
 	// guard feature detection
 	if (!window.history || typeof window.history.replaceState !== 'function') {
@@ -19,6 +20,7 @@ function changeLocationHash (str) {
 	var hash = '/' + (str ? '#' + str : '');
 	window.history.replaceState(undefined, undefined, hash);
 }
+*/
 
 
 // email
