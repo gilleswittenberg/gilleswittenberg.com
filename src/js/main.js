@@ -37,7 +37,7 @@ var elements = {
 };
 
 var indexes = [];
-[].forEach.call(elements.articles, function (_, index) { 
+Array.prototype.forEach.call(elements.articles, function (_, index) { 
 	indexes.push(index);
 });
 
@@ -108,7 +108,7 @@ var render = {
 	},
 
 	expanded: function () {
-		[].forEach.call(elements.articles, function (article, index) {
+		Array.prototype.forEach.call(elements.articles, function (article, index) {
 
 			// expanded
 			var classNameExpanded = '-is-expanded';
@@ -132,7 +132,7 @@ var render = {
 
 // listeners
 
-[].forEach.call(elements.articles, function (article, index) {
+Array.prototype.forEach.call(elements.articles, function (article, index) {
 	var anchor = article.querySelector('h3 a');
 	anchor.addEventListener('click', function (event) {
 		event.preventDefault();
