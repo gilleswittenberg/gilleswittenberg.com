@@ -155,7 +155,7 @@ var render = {
 	},
 
 	locationHash: function () {
-		var hash = state.scrollTo !== null ? names[state.scrollTo] : null;
+		var hash = state.scrollTo === null ? null : names[state.scrollTo];
 		changeLocationHash(hash);
 	}
 };
