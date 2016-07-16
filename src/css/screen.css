@@ -54,7 +54,6 @@ main > ul > li > article > h3 {
 }
 main > ul > li > article > h3 > a {
 	display: inline-block;
-	text-decoration: none;
 	color: inherit;
 	font-size: 1.8em;
 	line-height: 1em;
