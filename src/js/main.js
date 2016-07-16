@@ -24,9 +24,12 @@ function changeLocationHash (str) {
 // email
 
 var emailElement = document.querySelector('#email');
-var email = emailElement.text.replace(/\s/g, '').replace('[at]', '@').replace('[dot]', '.');
-emailElement.text = email;
-emailElement.setAttribute('href', 'mailto:' + email);
+var email = emailElement.textContent.replace(/\s/g, '').replace('[at]', '@').replace('[dot]', '.');
+var anchorElement = document.createElement('a');
+anchorElement.textContent = email;
+anchorElement.setAttribute('title', emailElement.getAttribute('title'));
+anchorElement.setAttribute('href', 'mailto:' + email);
+emailElement.parentNode.replaceChild(anchorElement, emailElement);
 
 
 // DOM elements

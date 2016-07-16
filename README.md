@@ -12,11 +12,11 @@
 
 ## TODO
 
-- KvK, BTW titles
-- Wrap email with A element using JavaScript 
 - Change Hash using JavaScript
 - Vertical spacing mobile + font-sizes
 - Gulp ESLint
+- Clean up vertical spacing
+- textContent IE8
 
 
 
