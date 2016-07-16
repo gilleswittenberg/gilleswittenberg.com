@@ -29,16 +29,21 @@ a {
 	text-decoration: none;
 	outline: none;
 }
-a:hover, a:active, a:focus {
+a:hover, 
+a:active, 
+a:focus {
 	text-decoration: underline;
 }
 
-h1, h2, main > ul > li > article > h3 > a, .content, button.expand {
+h1, h2, main > ul > li > article > h3 > a, 
+.content, 
+button.expand {
 	margin-top: 48px;
 	margin-bottom: 0;
 }
 
-p, li {
+p, 
+li {
 	margin: 0;
 	line-height: 1.7em;
 }
@@ -56,11 +61,12 @@ main > ul > li > article > h3 > a {
 	font-weight: 300;
 }
 main > ul > li > article > h3 > a:hover, 
-main > ul > li > article > h3 > a:active {
-	text-decoration: none;
-}
+main > ul > li > article > h3 > a:active,
 main > ul > li > article > h3 > a:focus {
 	text-decoration: none;
+}
+main > ul > li > article > h3 > a:focus,
+button.expand:focus {
 	border-bottom: solid 1px #333;
 }
 
@@ -80,10 +86,6 @@ article.-is-expanded .content {
 	display: block;
 }
 
-.content a {
-	font-size: 16px;
-}
-
 .content li {
 	width: 100%;
 	overflow: hidden;
@@ -99,10 +101,6 @@ button.expand {
 	font-size: 14px;
 	padding: 2px;
 	line-height: 13px;
-}
-
-button.expand:focus {
-	border-bottom: solid 1px #333;
 }
 
 body.no-js button.expand {
