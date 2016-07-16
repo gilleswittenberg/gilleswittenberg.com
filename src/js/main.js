@@ -86,7 +86,7 @@ var state = {
 		}
 	},
 
-	scrollTo: null,
+	lastExpanded: null,
 
 	dispatch: function (action, attributes) {
 		switch (action) {
@@ -94,12 +94,12 @@ var state = {
 			this.expanded.setAll();
 			break;
 		case 'TOGGLE_EXPANDED':
-			this.scrollTo = null;
+			this.lastExpanded = null;
 			if (this.expanded.has(attributes.index)) {
 				this.expanded.unset(attributes.index);
 			} else {
 				this.expanded.set(attributes.index);
-				this.scrollTo = attributes.index;
+				this.lastExpanded = attributes.index;
 			}
 			break;
 		}
@@ -143,9 +143,9 @@ var render = {
 
 	scrollTo: function () {
 		// guard
-		if (state.scrollTo === null) return;
+		if (state.lastExpanded === null) return;
 
-		var rect = elements.articles[state.scrollTo].getBoundingClientRect();
+		var rect = elements.articles[state.lastExpanded].getBoundingClientRect();
 		var windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
 		// guard
@@ -155,7 +155,7 @@ var render = {
 	},
 
 	locationHash: function () {
-		var hash = state.scrollTo === null ? null : names[state.scrollTo];
+		var hash = state.lastExpanded === null ? null : names[state.lastExpanded];
 		changeLocationHash(hash);
 	}
 };
