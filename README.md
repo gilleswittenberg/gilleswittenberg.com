@@ -14,7 +14,6 @@
 
 - Vertical spacing mobile + font-sizes
 - Clean up vertical spacing
-- Gulp ESLint
 - JS fallbacks and caniuse.com all 
 - Clean up
 

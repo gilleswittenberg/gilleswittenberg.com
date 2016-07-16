@@ -1,6 +1,13 @@
 var gulp = require('gulp');
+var eslint = require('gulp-eslint');
 var minify = require('gulp-minifier');
 var serve = require('gulp-serve');
+
+gulp.task('lint', function () {
+    return gulp.src(['src/js/main.js'])
+        .pipe(eslint())
+        .pipe(eslint.format());
+});
 
 gulp.task('minify', function () {
 	return gulp.src(['src/**/*']).pipe(minify({
