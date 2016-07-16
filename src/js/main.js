@@ -11,7 +11,6 @@ if (/no\-js/.test(document.body.className)) {
 
 // utils
 
-/*
 function changeLocationHash (str) {
 	// guard feature detection
 	if (!window.history || typeof window.history.replaceState !== 'function') {
@@ -20,7 +19,6 @@ function changeLocationHash (str) {
 	var hash = '/' + (str ? '#' + str : '');
 	window.history.replaceState(undefined, undefined, hash);
 }
-*/
 
 
 // email
@@ -43,8 +41,10 @@ var elements = {
 };
 
 var indexes = [];
-Array.prototype.forEach.call(elements.articles, function (_, index) { 
+var names = [];
+Array.prototype.forEach.call(elements.articles, function (article, index) { 
 	indexes.push(index);
+	names.push(article.getAttribute('id'));
 });
 
 
@@ -116,6 +116,7 @@ var render = {
 		this.expanded();
 		this.button();
 		this.scrollTo();
+		this.locationHash();
 	},
 
 	expanded: function () {
@@ -151,6 +152,11 @@ var render = {
 		if (rect.bottom <= windowHeight) return;
 
 		window.scrollBy(0, rect.bottom - windowHeight);
+	},
+
+	locationHash: function () {
+		var hash = state.scrollTo !== null ? names[state.scrollTo] : null;
+		changeLocationHash(hash);
 	}
 };
 
@@ -167,5 +173,14 @@ Array.prototype.forEach.call(elements.articles, function (article, index) {
 elements.button.addEventListener('click', function () {
 	state.dispatch('EXPAND_ALL');
 });
+
+// set from hash
+
+var hash = window.location.hash.replace(/^#/, '');
+var index = names.indexOf(hash);
+if (index > -1) {
+	state.dispatch('TOGGLE_EXPANDED', { index: index });
+}
+
 
 }(window, document));

@@ -12,11 +12,11 @@
 
 ## TODO
 
-- Change Hash using JavaScript
 - Vertical spacing mobile + font-sizes
 - Clean up vertical spacing
 - Gulp ESLint
 - JS fallbacks and caniuse.com all 
+- Clean up
 
 - LinkedIn
 - DNS using AWS Route 53
