@@ -107,6 +107,10 @@ article {
 	padding-bottom: 36px;
 }
 
+button.expand {
+	margin-bottom: 36px;
+}
+
 @media (min-width: 672px) {
 
 	div.wrap {
@@ -124,6 +128,10 @@ article {
 
 	article {
 		padding-bottom: 48px;
+	}
+
+	button.expand {
+		margin-bottom: 48px;
 	}
 }
 
