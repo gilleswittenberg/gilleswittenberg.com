@@ -1,18 +1,24 @@
-body {
+/* reset */
+
+body, h1, h2, h3, p, ul, li {
 	margin: 0;
+}
+
+/* default */ 
+
+body {
 	/* @LINK: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/ */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	font-weight: 300;
 	line-height: 1.4em;
 	color: #333;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 @media (min-width: 672px) {
 	body {
 		font-size: 1em;
 	}
 }
-
 
 h1 {
 	font-size: 1.8em;
@@ -29,7 +35,6 @@ h2 {
 ul {
 	list-style: none;
 	padding: 0;
-	margin: 0;
 }
 
 a {
@@ -42,28 +47,59 @@ a:focus {
 	text-decoration: underline;
 }
 
-h1, 
-h2, 
-main,
-.content {
-	margin-bottom: 0;
-	margin-top: 36px;
+p, 
+li {
+	line-height: 1.7em;
 }
-@media (min-width: 672px) {
-	h1, 
-	h2, 
-	main,
-	.content {
-		margin-top: 48px;
-	}
+
+
+h3 {
+	line-height: 1em;
+	font-size: 1em;
+	font-weight: 300;
+	margin: 0;
+}
+h3 > a {
+	display: inline-block;
+	color: inherit;
+	font-size: 1.8em;
+	line-height: 1em;
+}
+h3 > a:hover, 
+h3 > a:active,
+h3 > a:focus {
+	text-decoration: none;
+}
+
+
+/* focus */ 
+
+a:focus,
+button.expand:focus {
+	border-bottom: solid 1px #333;
+}
+
+
+/* spacings */
+
+div.wrap {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 h1, h2 {
 	margin-top: 48px;
 }
 
-main > ul > li > article > h3 > a, 
-aside {
+main,
+.content {
+	margin-top: 36px;
+}
+
+h3 > a,
+button.expand
+{
 	margin-top: 12px;
 }
 
@@ -71,45 +107,32 @@ article {
 	padding-bottom: 36px;
 }
 
-p, 
-li {
-	margin: 0;
-	line-height: 1.7em;
+@media (min-width: 672px) {
+
+	div.wrap {
+		padding: 56px;
+	}
+
+	h1, h2 {
+		margin-top: 60px;
+	}
+
+	main,
+	.content {
+		margin-top: 48px;
+	}
+
+	article {
+		padding-bottom: 48px;
+	}
 }
 
-main > ul > li > article > h3 {
-	font-size: 1em;
-	margin: 0;
-}
-main > ul > li > article > h3 > a {
-	display: inline-block;
-	color: inherit;
-	font-size: 1.8em;
-	line-height: 1em;
-	font-weight: 300;
-}
-main > ul > li > article > h3 > a:hover, 
-main > ul > li > article > h3 > a:active,
-main > ul > li > article > h3 > a:focus {
-	text-decoration: none;
-}
-main > ul > li > article > h3 > a:focus,
-button.expand:focus {
-	border-bottom: solid 1px #333;
-}
+
+/* content */
 
 .content {
 	display: none;
-	/* padding-bottom: 9px; */
 }
-
-/*
-@media (min-width: 672px) {
-	.content {
-		padding-bottom: 18px;
-	}
-}
-*/
 
 body.no-js article .content {
 	display: block;
@@ -130,6 +153,9 @@ span.translation {
 	font-size: 0.7em;
 }
 
+
+/* expand button */
+
 button.expand {
 	border: none;
 	outline: none;
@@ -143,6 +169,9 @@ button.expand {
 body.no-js button.expand {
 	display: none;
 }
+
+
+/* hidden */
 
 .-is-hidden {
 	display: none;
@@ -158,14 +187,4 @@ body.no-js button.expand {
 	}
 }
 
-div.wrap {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 27px 20px 54px;
-}
 
-@media (min-width: 672px) {
-	div.wrap {
-		padding: 72px 72px 120px;
-	}
-}

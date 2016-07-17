@@ -13,9 +13,5 @@
 
 ## TODO
 
-- Vertical spacing mobile + font-sizes. Font-size 1em < 300px width
-- Clean up vertical spacing
-- Clean up
-
 - LinkedIn
 - DNS using AWS Route 53
