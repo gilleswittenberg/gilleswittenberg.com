@@ -27,6 +27,7 @@ gulp.task('watch', function () {
   gulp.watch('./src/**/*', ['minify']);
 });
 
-gulp.task('serve', serve('dist'));
+gulp.task('serve', serve({ root: 'dist', port: 8080 }));
+gulp.task('serve-src', serve({ root: 'src', port: 8080 }));
 
 gulp.task('dev', ['serve', 'watch']);
