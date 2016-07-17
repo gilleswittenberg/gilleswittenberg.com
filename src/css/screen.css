@@ -64,6 +64,7 @@ h3 > a {
 	color: inherit;
 	font-size: 1.8em;
 	line-height: 1em;
+	margin-bottom: 1px;
 }
 h3 > a:hover, 
 h3 > a:active,
@@ -74,37 +75,48 @@ h3 > a:focus {
 
 /* focus */ 
 
-a:focus,
+h3 > a:focus,
 button.expand:focus {
 	border-bottom: solid 1px #333;
 }
 
+h3 > a:focus {
+	margin-bottom: 0;
+}
 
-/* spacings */
+
+
+/* vertical spacings */
 
 div.wrap {
 	max-width: 600px;
 	margin: 0 auto;
+	/* 20px is highest margin that does disable double tap zoom on iOS */
 	padding: 20px;
 }
 
-h1, h2 {
+h1, 
+h2{
 	margin-top: 48px;
 }
-
-main,
 .content {
+	margin-top: 47px;
+}
+
+main {
 	margin-top: 36px;
 }
 
 h3 > a,
-button.expand
-{
+button.expand {
 	margin-top: 12px;
 }
 
 article {
-	padding-bottom: 36px;
+	padding-bottom: 35px;
+}
+article.-is-expanded {
+	padding-bottom: 47px;
 }
 
 button.expand {
@@ -117,17 +129,24 @@ button.expand {
 		padding: 56px;
 	}
 
-	h1, h2 {
+	h1, 
+	h2 {
 		margin-top: 60px;
 	}
-
-	main,
 	.content {
+		margin-top: 59px;
+	}
+
+	main {
 		margin-top: 48px;
 	}
 
 	article {
-		padding-bottom: 48px;
+		padding-bottom: 47px;
+	}
+
+	article.-is-expanded {
+		padding-bottom: 59px;
 	}
 
 	button.expand {
@@ -166,6 +185,7 @@ span.translation {
 /* expand button */
 
 button.expand {
+	margin-bottom: 1px;
 	border: none;
 	outline: none;
 	background: none;
