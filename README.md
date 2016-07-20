@@ -13,5 +13,5 @@
 
 ## TODO
 
-- LinkedIn
+- LinkedIn profile picture
 - DNS using AWS Route 53
