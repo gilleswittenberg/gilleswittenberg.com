@@ -12,11 +12,11 @@ body {
 	font-weight: 300;
 	line-height: 1.4em;
 	color: #333;
-	font-size: 1.1em;
+	font-size: 1em;
 }
-@media (min-width: 672px) {
+@media (min-width: 321px) and (max-width: 671px) {
 	body {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 }
 
