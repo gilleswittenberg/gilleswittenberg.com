@@ -91,7 +91,6 @@ div.wrap {
 	margin: 0 auto;
 	/* 20px is highest margin that does disable double tap zoom on iOS */
 	padding: 20px;
-	padding-bottom: 68px; /* 20 + 48 */
 }
 
 h1, 
@@ -130,7 +129,6 @@ button.expand:focus {
 
 	div.wrap {
 		padding: 56px;
-		padding-bottom: 116px; /* 56 + 60 */
 	}
 
 	h1, 

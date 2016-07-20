@@ -13,5 +13,8 @@
 
 ## TODO
 
+- wrapper padding-bottom
+- font-size 1em < 320px width
+
 - LinkedIn
 - DNS using AWS Route 53
