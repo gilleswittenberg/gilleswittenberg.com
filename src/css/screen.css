@@ -84,8 +84,6 @@ h3 > a:focus {
 	margin-bottom: 0;
 }
 
-
-
 /* vertical spacings */
 
 div.wrap {
@@ -93,6 +91,7 @@ div.wrap {
 	margin: 0 auto;
 	/* 20px is highest margin that does disable double tap zoom on iOS */
 	padding: 20px;
+	padding-bottom: 68px; /* 20 + 48 */
 }
 
 h1, 
@@ -120,13 +119,18 @@ article.-is-expanded {
 }
 
 button.expand {
-	margin-bottom: 36px;
+	margin-bottom: 48px;
+}
+
+button.expand:focus {
+	margin-bottom: 47px;
 }
 
 @media (min-width: 672px) {
 
 	div.wrap {
 		padding: 56px;
+		padding-bottom: 116px; /* 56 + 60 */
 	}
 
 	h1, 
@@ -150,7 +154,11 @@ button.expand {
 	}
 
 	button.expand {
-		margin-bottom: 48px;
+		margin-bottom: 60px;
+	}
+
+	button.expand:focus {
+		margin-bottom: 59px;
 	}
 }
 
@@ -185,7 +193,6 @@ span.translation {
 /* expand button */
 
 button.expand {
-	margin-bottom: 1px;
 	border: none;
 	outline: none;
 	background: none;
@@ -215,5 +222,3 @@ body.no-js button.expand {
 		display: none;
 	}
 }
-
-
