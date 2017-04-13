@@ -1,0 +1,1 @@
+aws s3 --profile gilleswittenberg sync static s3://www.gilleswittenberg.com/ --exclude=".gitkeep"
