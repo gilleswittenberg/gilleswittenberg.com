@@ -10,6 +10,11 @@
 - DNS www.gilleswittenberg.com CNAME www.gilleswittenberg.com.s3-website.eu-central-1.amazonaws.com
 - DNS gilleswittenberg.com A 174.129.25.170 (http://wwwizer.com/ redirects to www.)
 
+## IPFS
+
+- `ipfs add -r dist`
+- DNS gilleswittenberg.com TXT dnslink=/ipfs/Qmb4mg4TRq3jzdheSzwZrZ1L7zZSX5BFTrs1DZMNbuGQHW
+- https://gateway.ipfs.io/ipns/gilleswittenberg.com/
 
 ## TODO
 
