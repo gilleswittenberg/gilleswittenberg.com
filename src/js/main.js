@@ -4,7 +4,7 @@
 
 // feature detection
 
-if (/no\-js/.test(document.body.className)) {
+if (/no-js/.test(document.body.className)) {
 	return;
 }
 
@@ -40,7 +40,7 @@ var elements = {
 
 var indexes = [];
 var names = [];
-Array.prototype.forEach.call(elements.articles, function (article, index) { 
+Array.prototype.forEach.call(elements.articles, function (article, index) {
 	indexes.push(index);
 	names.push(article.getAttribute('id'));
 });
