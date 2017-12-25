@@ -14,7 +14,7 @@ if (/no-js/.test(document.body.className)) {
 function changeLocationHash (str) {
 	// guard feature detection
 	if (!window.history || typeof window.history.replaceState !== 'function') return;
-	var hash = '/' + (str ? '#' + str : '');
+	var hash = str ? '#' + str : '';
 	window.history.replaceState(undefined, undefined, hash);
 }
 
