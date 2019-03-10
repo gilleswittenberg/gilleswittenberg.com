@@ -14,8 +14,8 @@
   "author": "Gilles Wittenberg",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-minifier": "^0.1.4",
+    "gulp-eslint": "^5.0.0",
+    "gulp-minifier": "^1.2.2",
     "gulp-serve": "^1.4.0"
   }
 }
