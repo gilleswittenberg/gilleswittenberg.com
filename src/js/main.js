@@ -176,9 +176,7 @@ elements.button.addEventListener('click', function () {
 
 var hash = window.location.hash.replace(/^#/, '');
 var index = names.indexOf(hash);
-if (index > -1) {
-	state.dispatch('TOGGLE_EXPANDED', { index: index });
-}
-
+index = index > -1 ? index : 0;
+state.dispatch('TOGGLE_EXPANDED', { index: index });
 
 }(window, document));
