@@ -1,3 +1,0 @@
-gulp minify
-aws s3 --profile gilleswittenberg sync dist s3://www.gilleswittenberg.com/ --exclude=".gitkeep"
-./deploy-static
