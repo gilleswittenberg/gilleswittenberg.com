@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -13,9 +13,9 @@
   },
   "author": "Gilles Wittenberg",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^5.0.0",
-    "gulp-minifier": "^1.2.2",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-minifier": "^3.5.0",
     "gulp-serve": "^1.4.0"
   }
 }
