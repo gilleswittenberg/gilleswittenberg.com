@@ -3,14 +3,15 @@ var eslint = require('gulp-eslint');
 var minify = require('gulp-minifier');
 var serve = require('gulp-serve');
 
-gulp.task('lint', function () {
+gulp.task('lint', gulp.parallel(function () {
     return gulp.src(['src/js/main.js'])
         .pipe(eslint())
         .pipe(eslint.format());
-});
+}));
 
 gulp.task('minify', function () {
-	return gulp.src(['src/**/*']).pipe(minify({
+	return gulp.src(['src/**/*'])
+		.pipe(minify({
 	    minify: true,
 	    collapseWhitespace: true,
 	    conservativeCollapse: true,
@@ -20,7 +21,8 @@ gulp.task('minify', function () {
 	        var m = content.match(/\/\*![\s\S]*?\*\//img);
 	        return m && m.join('\n') + '\n' || '';
 	    }
-	})).pipe(gulp.dest('dist'));
+		}))
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
@@ -30,4 +32,4 @@ gulp.task('watch', function () {
 gulp.task('serve', serve({ root: 'dist', port: 8080 }));
 gulp.task('serve-src', serve({ root: 'src', port: 8080 }));
 
-gulp.task('dev', ['serve', 'watch']);
+gulp.task('dev', gulp.series(['serve', 'watch']));
